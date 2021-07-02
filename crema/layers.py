@@ -2,7 +2,10 @@
 '''Custom Keras layers'''
 
 import keras.backend as K
-from keras.engine.topology import Layer
+try:
+    from keras.engine.topology import Layer
+except:
+    from keras.engine.base_layer import Layer
 
 
 __all__ = ['SqueezeLayer']
